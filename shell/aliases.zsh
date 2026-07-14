@@ -22,7 +22,7 @@ alias proton-pass="open -a 'Proton Pass.app'"
 # --- Proton Pass Shortcuts ---
 alias plock="pass-cli session lock"
 alias punlock="pass-cli session unlock"
-alias pstatus="pass-cli session status"
+alias pstatus="pass-cli info"
 
 # --- Utilities ---
 # Home
