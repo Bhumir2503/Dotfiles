@@ -6,6 +6,7 @@
 brew "starship"
 brew "xcodesorg/made/xcodes"
 brew "zoxide"
+brew "proton-pass-cli"
 
 
 # Mac Apps (Casks)
@@ -14,6 +15,4 @@ cask "figma"
 cask "ghostty"
 cask "antigravity-ide"
 cask "whatsapp"
-cask "proton-pass"
-cask "protonvpn"
 cask "sf-symbols"
