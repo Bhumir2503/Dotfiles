@@ -20,6 +20,7 @@ alias boot-sim="xcrun simctl boot"
 alias proton-pass="open -a 'Proton Pass.app'"
 
 # --- Proton Pass Shortcuts ---
+alias p="pass-cli"
 alias plock="pass-cli session lock"
 alias punlock="pass-cli session unlock && pass-cli ssh-agent load --vault-name 'Dev'"
 alias pstatus="pass-cli info"
