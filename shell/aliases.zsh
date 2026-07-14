@@ -15,14 +15,19 @@ alias sims-active="xcrun simctl list devices | grep Booted"
 alias sims-wipe="xcrun simctl erase all && echo 'All simulators wiped clean!'"
 alias boot-sim="xcrun simctl boot"
 
+# --- Enhanced SSH Aliases ---
+alias sshlist="ssh-add -l"
+alias sshflush="ssh-add -D"
+alias sshconf="nano ~/.ssh/config"
+alias sshtest="ssh -v"
+
 # --- Proton Pass (CLI) ---
-# Launch Proton Pass GUI
 alias proton-pass="open -a 'Proton Pass.app'"
 
 # --- Proton Pass Shortcuts ---
-alias p="pass-cli"
-alias plock="pass-cli session lock"
+alias plock="pass-cli session lock && ssh-add -D"
 alias punlock="pass-cli session unlock && pass-cli ssh-agent load --vault-name 'Dev'"
+alias prefresh="pass-cli ssh-agent load --vault-name 'Dev'"
 alias pstatus="pass-cli info"
 
 # --- Utilities ---
