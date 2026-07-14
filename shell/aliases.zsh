@@ -21,7 +21,7 @@ alias proton-pass="open -a 'Proton Pass.app'"
 
 # --- Proton Pass Shortcuts ---
 alias plock="pass-cli session lock"
-alias punlock="pass-cli session unlock"
+alias punlock="pass-cli session unlock && pass-cli ssh-agent load --vault-name 'Dev'"
 alias pstatus="pass-cli info"
 
 # --- Utilities ---

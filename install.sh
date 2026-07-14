@@ -45,6 +45,14 @@ echo "Linking Git configurations..."
 ln -sf "$DOTFILES/git/.gitconfig" "$HOME/.gitconfig"
 ln -sf "$DOTFILES/git/.gitignore_global" "$HOME/.gitignore_global"
 
+# --- 5. Create a starting .zshrc.local from the template if it doesn't exist yet
+if [ ! -f "$HOME/.zshrc.local" ]; then
+    echo "   Copying .zshrc.local template to home directory..."
+    cp "$DOTFILES/shell/zshrc.local.template" "$HOME/.zshrc.local"
+fi
 
-echo "Setup complete! Reloading terminal environment..."
-exec zsh -l
+echo "Bootstrap complete! Mac is ready."
+echo "Next Steps:"
+echo "   1. Run 'pass-cli login' to authenticate your vault."
+echo "   2. Create your ~/.zshrc.local file to load your keys."
+echo "   3. Restart your terminal."

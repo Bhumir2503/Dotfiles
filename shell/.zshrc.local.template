@@ -1,0 +1,10 @@
+# ==========================================
+# .zshrc.local - Local Secrets Template
+# ==========================================
+
+# --- 1. SSH Keys ---
+# Load SSH key into the macOS SSH agent silently on startup.
+# Replace "Dev" with the name of specific vault if different.
+pass-cli ssh-agent load --vault-name "Dev" &> /dev/null
+
+# --- 2. Environment Variables ---
