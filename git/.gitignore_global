@@ -1,0 +1,51 @@
+# ==========================================
+# .gitignore_global - Global exclusions
+# ==========================================
+
+# --- macOS General ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Trash
+.DocumentRevisions-V100
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# --- Xcode & iOS Development ---
+# Personal Xcode settings and window layouts (Crucial to ignore globally)
+xcuserdata/
+*.xcuserstate
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# Build products and Derived Data
+DerivedData/
+build/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# --- Swift Package Manager ---
+.build/
+
+# --- Web & Node (Just in case) ---
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# --- Security ---
+# NEVER commit environment variables globally
+.env
+.env.local
+.env.development
+.env.production
+*.pem
+*.key

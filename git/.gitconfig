@@ -1,0 +1,50 @@
+# ==========================================
+# .gitconfig - Global Git Settings
+# ==========================================
+
+[user]
+    name = Bhumir2503
+    email = Bhumir2503@gmail.com
+
+[core]
+    # Use Neovim for commit messages and merges
+    editor = nvim
+    # Point Git to your global ignore file
+    excludesfile = ~/.gitignore_global
+    # Make Git case-sensitive for macOS (which is case-insensitive by default)
+    ignorecase = false
+
+[init]
+    # Modern default branch name
+    defaultBranch = main
+
+[pull]
+    # Always rebase when pulling to prevent messy merge commits
+    rebase = true
+
+[fetch]
+    # Automatically delete local branches if they were deleted on GitHub
+    prune = true
+
+[push]
+    # Automatically set the upstream branch if it doesn't exist
+    autoSetupRemote = true
+    # Only push the current branch, not all branches
+    default = current
+
+[color]
+    # Ensure terminal output is colorized
+    ui = auto
+
+# --- Built-in Git Aliases ---
+# Even though you use Lazygit, these are great for quick terminal commands
+[alias]
+    st = status -sb
+    co = checkout
+    br = branch
+    cm = commit -m
+    amend = commit --amend --no-edit
+    # A beautiful, color-coded, one-line Git history graph
+    hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    # Undo the last commit but keep the files staged
+    undo = reset --soft HEAD~1

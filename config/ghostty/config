@@ -1,0 +1,14 @@
+# ==========================================
+# Ghostty Configuration
+# ==========================================
+
+# Font
+font-family = JetBrains Mono
+font-size = 14
+
+# Theme (run `ghostty +list-themes` to browse)
+theme = Catppuccin Macchiato
+
+# Keybinds
+keybind = cmd+enter=toggle_fullscreen
+keybind = ctrl+shift+t=new_tab

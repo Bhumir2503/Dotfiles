@@ -1,0 +1,19 @@
+# ==========================================
+# BrewFile - Homebrew Package Manager
+# ==========================================
+
+# Terminal tools
+brew "starship"
+brew "xcodesorg/made/xcodes"
+brew "zoxide"
+
+
+# Mac Apps (Casks)
+cask "google-chrome"
+cask "figma"
+cask "ghostty"
+cask "antigravity-ide"
+cask "whatsapp"
+cask "proton-pass"
+cask "protonvpn"
+cask "sf-symbols"
