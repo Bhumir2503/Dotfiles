@@ -28,6 +28,28 @@ echo "Installing tools and apps from Brewfile (skipping installed)..."
 brew bundle --file="$DOTFILES/packages/Brewfile" --no-upgrade
 
 
+# --- 1b. NVM & Node.js Setup ---
+echo "Setting up NVM and Node.js..."
+export NVM_DIR="$HOME/.nvm"
+mkdir -p "$NVM_DIR"
+
+# Source NVM temporarily so this subshell script can use the 'nvm' command
+if [ -s "/opt/homebrew/opt/nvm/nvm.sh" ]; then
+    source "/opt/homebrew/opt/nvm/nvm.sh"
+    
+    # Check if a default node alias is already set; if not, install the latest version
+    if ! nvm alias default &>/dev/null; then
+        echo "Installing latest Node.js and setting as default..."
+        nvm install node
+        nvm alias default node
+    else
+        echo "   Node.js default is already configured via NVM. Skipping installation."
+    fi
+else
+    echo "   Warning: NVM installation not found at /opt/homebrew/opt/nvm/nvm.sh"
+fi
+
+
 # --- 2. Shell Configurations ---
 echo "Linking shell configurations..."
 ln -sf "$DOTFILES/shell/.zshrc" "$HOME/.zshrc"
@@ -44,6 +66,7 @@ ln -sf "$DOTFILES/config/starship.toml" "$HOME/.config/starship.toml"
 echo "Linking Git configurations..."
 ln -sf "$DOTFILES/git/.gitconfig" "$HOME/.gitconfig"
 ln -sf "$DOTFILES/git/.gitignore_global" "$HOME/.gitignore_global"
+
 
 # --- 5. Create a starting .zshrc.local from the template if it doesn't exist yet
 if [ ! -f "$HOME/.zshrc.local" ]; then
