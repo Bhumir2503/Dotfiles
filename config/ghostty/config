@@ -1,6 +1,7 @@
 # ==========================================
 # Ghostty Configuration
 # ==========================================
+term = xterm-256color
 
 # Font
 font-family = JetBrains Mono

@@ -161,6 +161,8 @@ ignore_base = false
 symbol = ""
 style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+detect_files = ["Package.swift"]
+detect_folders = ["JournPath.xcodeproj", "JournPath.xcworkspace"]
 
 [time]
 disabled = false
